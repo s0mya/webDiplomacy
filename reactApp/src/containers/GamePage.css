@@ -6,3 +6,11 @@
 .GamePage .Header {
   height: 64px;
 }
+
+.GamePage .Footer {
+  height: 64px;
+}
+
+.GamePage .Body {
+  height: calc(100% - (64px + 64px));
+}

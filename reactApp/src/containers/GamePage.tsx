@@ -19,7 +19,7 @@ const GamePage = (props: Props) => {
         </Col>
       </Row>
       <Row className="Body">
-        <Col xl="8">
+        <Col xl="7">
           <GameMap />
         </Col>
         <Col></Col>
