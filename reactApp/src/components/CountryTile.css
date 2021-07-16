@@ -1,0 +1,11 @@
+.CountryTile {
+  display: inline-block;
+}
+
+.CountryTile .label {
+  font-style: normal;
+  font-weight: 600;
+  font-size: 10px;
+  line-height: 10px;
+  vertical-align: middle;
+}

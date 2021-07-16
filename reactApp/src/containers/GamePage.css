@@ -1,0 +1,8 @@
+.GamePage {
+  background: #e5e5e5;
+  height: 100vh;
+}
+
+.GamePage .Header {
+  height: 64px;
+}

@@ -1,8 +1,9 @@
 import React, { useState } from "react";
-import GameMap from "./components/GameMap";
+import GamePage from "./containers/GamePage";
+import "./App.css";
 
 function App() {
-  return <GameMap />;
+  return <GamePage />;
 }
 
 export default App;

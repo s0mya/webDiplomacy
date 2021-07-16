@@ -7,51 +7,47 @@
   pointer-events: none;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+:root {
+  --turkey: hsla(165, 38%, 51%, 1);
+  --austria: hsla(206, 32%, 56%, 1);
+  --france: hsla(260, 26%, 56%, 1);
+  --england: hsla(354, 44%, 59%, 1);
+  --italy: hsla(11, 87%, 67%, 1);
+  --russia: hsla(18, 100%, 80%, 1);
+  --germany: hsla(43, 100%, 80%, 1);
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.icon-country {
+  display: inline-block;
+  width: 14px;
+  height: 14px;
+  border-radius: 7px;
 }
 
-.App-link {
-  color: #61dafb;
+.icon-country-turkey {
+  background-color: var(--turkey);
 }
 
-/* video {
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
-} */
-
-.carousel {
-  position: relative;
-  object-fit: cover;
-  width: 100vw;
-  height: 100vh;
-  position: fixed;
-  top: 0;
-  left: 0;
+.icon-country-austria {
+  background-color: var(--austria);
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.icon-country-france {
+  background-color: var(--france);
+}
+
+.icon-country-england {
+  background-color: var(--england);
+}
+
+.icon-country-italy {
+  background-color: var(--italy);
+}
+
+.icon-country-russia {
+  background-color: var(--russia);
+}
+
+.icon-country-germany {
+  background-color: var(--germany);
 }
