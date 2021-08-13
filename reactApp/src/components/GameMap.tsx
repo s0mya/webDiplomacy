@@ -1,9 +1,9 @@
 import React, { useCallback, useLayoutEffect, useRef } from "react";
 import { Button } from "react-bootstrap";
 import ReactDOM from "react-dom";
-// import { default as MyImage } from "../assets/inlineMap.svg";
 
 import SvgFancyMap from "./SvgFancyMap";
+import SvgInlineMap from "./SvgInlineMap";
 
 interface Props {}
 
@@ -18,6 +18,7 @@ interface Props {}
  */
 const GameMap = (props: Props) => {
   const svgRef = useRef(null);
+  const inlineRef = useRef(null);
 
   function findNodeById(list: NodeList, id: string): SVGElement {
     const length = list.length;
@@ -55,13 +56,43 @@ const GameMap = (props: Props) => {
               // node.style.filter = "url(#shadow)";
             });
           }
-          debugger;
+
+          
+
         }}
       >
-        Test Action
+        Test Fancy Map update
       </Button>
-      <h1>Fancy Map</h1>asasdafsdf
+      <h1>Fancy Map</h1>
       <SvgFancyMap ref={svgRef} />
+      <h1>Inline Map</h1>
+      <Button
+        onClick={(e) => {
+          console.log(inlineRef);
+          debugger;
+          const map = inlineRef.current as SVGElement;
+          if (map) {
+            const land = findNodeById(
+              map.childNodes,
+              "land-area"
+            );
+            console.log(land);
+
+            land.childNodes.forEach((node: SVGElement) => {
+              if (node.id === 'land-area-yor')
+               {
+                 node.style.fill = "#f00";
+
+                node.style.filter = "url(#shadow)";
+               }
+            });
+          }
+
+          
+
+        }}
+      >Test inline map</Button>
+      <SvgInlineMap ref={inlineRef} />
     </>
   );
 };
