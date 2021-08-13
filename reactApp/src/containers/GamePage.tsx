@@ -14,7 +14,7 @@ const GamePage = (props: Props) => {
       <Row className="Header">
         <Col>
           {COUNTRIES.map((country: string) => (
-            <CountryTile country={country} />
+            <CountryTile country={country} key={country} />
           ))}
         </Col>
       </Row>
